@@ -218,7 +218,10 @@ library Address {
     function isContract(address account) internal view returns (bool) {
         bytes32 codehash;
         bytes32 accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470;
-        // solhint-disable-next-line no-inline-assembly
+        //it means if the address is empty ,it has no code at all ,then the address's hash will be equal to 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470
+        //because empty contract address's hash result is 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470.
+        //explain at below :
+        //https://ethereum.stackexchange.com/questions/15641/how-does-a-contract-find-out-if-another-address-is-a-contract
         assembly { codehash := extcodehash(account) }
         return (codehash != 0x0 && codehash != accountHash);
     }
