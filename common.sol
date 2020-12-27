@@ -2,7 +2,7 @@
 pragma solidity ^0.5.0;
 pragma experimental ABIEncoderV2;
 //ericCheng wechat:16602141947
-
+//https://kovan.etherscan.io/address/0xe21bf6edc93f5b02a999e2d23fd184515037b84a#code
 interface IERC20 {
     function totalSupply() external view returns (uint256);
     function balanceOf(address account) external view returns (uint256);
