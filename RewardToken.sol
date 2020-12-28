@@ -1,5 +1,7 @@
 //https://kovan.etherscan.io/address/0x76beb9e48104259f6adaef6e0033acf0f35c711b#readContract
-
+//报错:Gas estimation errored .....
+//实际上是constructor的参数_storage 写成了自己的账号地址了,应该写部署的Storage合约的地址!!!
+//fuck  声东击西吗?提示和真正的原因根本不是一回事儿.解决bug全靠缘分, I 服了 U.
 /**
  *Submitted for verification at Etherscan.io on 2020-12-28
 */
