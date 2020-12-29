@@ -1,5 +1,5 @@
 /**
- *Submitted for verification at Etherscan.io on 2020-10-13
+ *Submitted for verification at Etherscan.io on 2020-10-09
 */
 
 // File: contracts/Storage.sol
@@ -959,6 +959,11 @@ contract NoMintRewardPool is LPTokenWrapper, IRewardDistributionRecipient, Contr
 
 
     // Harvest Migrate
+
+    function setCanMigrate(bool _canMigrate) public onlyGovernance {
+      canMigrate = _canMigrate;
+    }
+
     // obtain the legacy vault sahres from the migration strategy
     function pullFromStrategy() public onlyMigrationStrategy {
       canMigrate = true;
